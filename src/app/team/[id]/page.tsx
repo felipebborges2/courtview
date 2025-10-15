@@ -9,9 +9,10 @@ interface TeamPageProps {
 }
 
 export default function TeamPage({ params }: TeamPageProps) {
-  // garante que nenhuma tela anterior deixou o body travado
   useEffect(() => {
-    document.body.style.overflow = "";
+    // Libera o scroll caso alguma página anterior tenha bloqueado
+    document.body.style.overflow = "auto";
+    document.documentElement.style.overflow = "auto";
   }, []);
 
   const team = TEAMS.find((t: Team) => t.id === params.id);
@@ -28,7 +29,7 @@ export default function TeamPage({ params }: TeamPageProps) {
   }
 
   return (
-    <main className="min-h-[100svh] w-full bg-gradient-to-b from-gray-950 to-black text-white">
+    <main className="w-full min-h-[100svh] bg-gradient-to-b from-gray-950 to-black text-white">
       <div className="mx-auto max-w-5xl px-6 py-10">
         {/* Botão voltar */}
         <Link
