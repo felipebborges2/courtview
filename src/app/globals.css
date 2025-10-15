@@ -28,35 +28,15 @@ body {
 html, body {
   height: auto;
   min-height: 100%;
-}
-
-body {
-  overflow-y: auto !important;
-  -webkit-overflow-scrolling: touch; /* iOS */
-  overscroll-behavior-y: contain;
-}
-
-html, body {
-  height: auto;
-  min-height: 100%;
-  overflow-y: auto !important;
-  -webkit-overflow-scrolling: touch; /* rolagem suave no iOS */
-  overscroll-behavior-y: contain;
-  scroll-behavior: smooth;
-  background-color: #000; /* mantém o fundo escuro como o resto */
-}
-
-html, body {
-  height: auto;
-  min-height: 100%;
   overflow-y: auto !important;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-y: contain;
 }
 
-/* iOS: preenche a viewport real quando toolbars aparecem/desaparecem */
+/* Safari iOS fix: fill available height e evitar travas de scroll */
 @supports (-webkit-touch-callout: none) {
   html, body {
     height: -webkit-fill-available;
+    position: relative;
   }
 }
