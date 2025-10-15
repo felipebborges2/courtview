@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   title: "CourtView | Explore a NBA",
   description: "Times, arenas e recordes da NBA",
   icons: {
-    icon: "/courtview-icon.png"
-  }
+    icon: "/courtview-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -26,13 +26,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-     <body
-  className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-[100svh] overflow-y-auto`}
->
-  {children}
-</body>
-
+    <html lang="en" className="h-full">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-[100dvh] overflow-y-scroll overflow-x-hidden`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
