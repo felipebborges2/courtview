@@ -45,3 +45,18 @@ html, body {
   scroll-behavior: smooth;
   background-color: #000; /* mantém o fundo escuro como o resto */
 }
+
+html, body {
+  height: auto;
+  min-height: 100%;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+}
+
+/* iOS: preenche a viewport real quando toolbars aparecem/desaparecem */
+@supports (-webkit-touch-callout: none) {
+  html, body {
+    height: -webkit-fill-available;
+  }
+}

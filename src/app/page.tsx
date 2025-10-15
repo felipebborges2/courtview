@@ -1122,7 +1122,7 @@ const sorted = useMemo(() => {
       }}
     >
       {/* Header */}
-<header className="sticky top-0 z-40 border-b border-white/10 bg-neutral-950/70 backdrop-blur-xl">
+<header className="md:sticky top-0 z-40 border-b border-white/10 bg-neutral-950/70 md:backdrop-blur-xl">
   <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
     <div className="flex items-center gap-3">
       <div className="flex h-9 w-9 items-center justify-center">

@@ -19,7 +19,7 @@ export default function TeamPage({ params }: TeamPageProps) {
 
   if (!team) {
     return (
-      <main className="min-h-[100svh] flex flex-col items-center justify-center bg-black text-white">
+      <main className="min-h-[100dvh] flex flex-col items-center justify-center bg-black text-white">
         <h1 className="text-2xl font-bold mb-4">🏀 Time não encontrado</h1>
         <Link href="/" className="text-blue-400 hover:underline hover:text-blue-300">
           Voltar para a lista
@@ -29,7 +29,7 @@ export default function TeamPage({ params }: TeamPageProps) {
   }
 
   return (
-    <main className="w-full min-h-[100svh] bg-gradient-to-b from-gray-950 to-black text-white">
+    <main className="w-full min-h-[100dvh] bg-gradient-to-b from-gray-950 to-black text-white">
       <div className="mx-auto max-w-5xl px-6 py-10">
         {/* Botão voltar */}
         <Link
