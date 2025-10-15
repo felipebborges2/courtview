@@ -1122,22 +1122,31 @@ const sorted = useMemo(() => {
       }}
     >
       {/* Header */}
-<header className="w-full fixed top-0 left-0 z-40 border-b border-white/10 bg-neutral-950/80 backdrop-blur-xl supports-[backdrop-filter]:bg-neutral-950/60">
+<header
+  className="w-full top-0 left-0 z-40 border-b border-white/10 bg-neutral-950/80 backdrop-blur-xl supports-[backdrop-filter]:bg-neutral-950/60"
+  style={{
+    position: "sticky",
+    WebkitBackdropFilter: "blur(12px)",
+    backdropFilter: "blur(12px)",
+    transform: "translateZ(0)", // 🔑 força o isolamento do contexto de composição no iOS
+  }}
+>
   <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
     <div className="flex items-center gap-3">
       <div className="flex h-9 w-9 items-center justify-center">
-
         <Image
           src="/courtview-icon.png"
           alt="CourtView logo"
-          width={300}
-          height={300}
+          width={36}
+          height={36}
           className="object-contain"
         />
       </div>
       <div>
         <h1 className="text-xl font-extrabold tracking-tight">CourtView</h1>
-        <p className="text-xs text-white/60">Times, histórias e recordes da NBA</p>
+        <p className="text-xs text-white/60">
+          Times, histórias e recordes da NBA
+        </p>
       </div>
     </div>
 
@@ -1165,6 +1174,7 @@ const sorted = useMemo(() => {
     </nav>
   </div>
 </header>
+
 
       {/* Hero / Controls */}
       <section className="mx-auto max-w-7xl px-4 py-8">
