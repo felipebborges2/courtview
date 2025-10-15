@@ -1123,12 +1123,12 @@ const sorted = useMemo(() => {
     >
       {/* Header */}
 <header
-  className="w-full top-0 left-0 z-40 border-b border-white/10 bg-neutral-950/80 backdrop-blur-xl supports-[backdrop-filter]:bg-neutral-950/60"
+  className="w-full top-0 left-0 z-[9999] border-b border-white/10 bg-neutral-950/80 supports-[backdrop-filter]:bg-neutral-950/60"
   style={{
-    position: "sticky",
-    WebkitBackdropFilter: "blur(12px)",
-    backdropFilter: "blur(12px)",
-    transform: "translateZ(0)", // 🔑 força o isolamento do contexto de composição no iOS
+    position: "fixed",
+    WebkitBackdropFilter: "blur(10px)",
+    backdropFilter: "blur(10px)",
+    transform: "translate3d(0,0,0)",
   }}
 >
   <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
@@ -1174,6 +1174,7 @@ const sorted = useMemo(() => {
     </nav>
   </div>
 </header>
+
 
 
       {/* Hero / Controls */}

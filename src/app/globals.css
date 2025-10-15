@@ -26,17 +26,16 @@ body {
 }
 
 html, body {
-  height: auto;
-  min-height: 100%;
-  overflow-y: auto !important;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior-y: contain;
+  height: auto !important;
+  min-height: 100% !important;
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch !important;
+  overscroll-behavior-y: contain !important;
 }
 
-/* Safari iOS fix: fill available height e evitar travas de scroll */
 @supports (-webkit-touch-callout: none) {
   html, body {
-    height: -webkit-fill-available;
-    position: relative;
+    height: -webkit-fill-available !important;
   }
 }
+

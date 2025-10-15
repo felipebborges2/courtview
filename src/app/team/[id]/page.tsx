@@ -19,7 +19,7 @@ export default function TeamPage({ params }: TeamPageProps) {
 
   if (!team) {
     return (
-      <main className="w-full min-h-[100dvh] pt-20 pb-24 bg-gradient-to-b from-gray-950 to-black text-white">
+      <main className="w-full min-h-[100dvh] pt-20 pb-24 bg-gradient-to-b from-gray-950 to-black text-white relative">
         <h1 className="text-2xl font-bold mb-4">🏀 Time não encontrado</h1>
         <Link href="/" className="text-blue-400 hover:underline hover:text-blue-300">
           Voltar para a lista
