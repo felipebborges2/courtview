@@ -2,16 +2,14 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { TEAMS, type Team } from "../../page"; // mantém seu import
+import { TEAMS, type Team } from "../../page";
 
 interface TeamPageProps {
-  params: {
-    id: string;
-  };
+  params: { id: string };
 }
 
 export default function TeamPage({ params }: TeamPageProps) {
-  // Destrava o scroll caso alguma página anterior tenha deixado o body bloqueado
+  // garante que nenhuma tela anterior deixou o body travado
   useEffect(() => {
     document.body.style.overflow = "";
   }, []);
@@ -22,10 +20,7 @@ export default function TeamPage({ params }: TeamPageProps) {
     return (
       <main className="min-h-[100svh] flex flex-col items-center justify-center bg-black text-white">
         <h1 className="text-2xl font-bold mb-4">🏀 Time não encontrado</h1>
-        <Link
-          href="/"
-          className="text-blue-400 hover:underline hover:text-blue-300"
-        >
+        <Link href="/" className="text-blue-400 hover:underline hover:text-blue-300">
           Voltar para a lista
         </Link>
       </main>
@@ -33,9 +28,7 @@ export default function TeamPage({ params }: TeamPageProps) {
   }
 
   return (
-    // 🔑 Raiz rolável e com viewport “segura” no mobile
-    <main className="min-h-[100svh] w-full overflow-y-auto overflow-x-hidden bg-gradient-to-b from-gray-950 to-black text-white">
-      {/* container centralizado */}
+    <main className="min-h-[100svh] w-full bg-gradient-to-b from-gray-950 to-black text-white">
       <div className="mx-auto max-w-5xl px-6 py-10">
         {/* Botão voltar */}
         <Link
@@ -62,15 +55,9 @@ export default function TeamPage({ params }: TeamPageProps) {
 
         {/* Dados rápidos */}
         <div className="flex flex-wrap justify-center gap-6 text-sm mb-10">
-          <span className="bg-gray-800 px-3 py-1 rounded-md">
-            🏆 {team.championships} títulos
-          </span>
-          <span className="bg-gray-800 px-3 py-1 rounded-md">
-            🌍 Conferência: {team.conference}
-          </span>
-          <span className="bg-gray-800 px-3 py-1 rounded-md">
-            📅 Fundado: {team.founded}
-          </span>
+          <span className="bg-gray-800 px-3 py-1 rounded-md">🏆 {team.championships} títulos</span>
+          <span className="bg-gray-800 px-3 py-1 rounded-md">🌍 Conferência: {team.conference}</span>
+          <span className="bg-gray-800 px-3 py-1 rounded-md">📅 Fundado: {team.founded}</span>
         </div>
 
         {/* História */}
