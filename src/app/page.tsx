@@ -386,7 +386,7 @@ export const TEAMS: Team[] = [
     history: "Um dos times mais antigos da NBA, fundado em 1946 como Philadelphia Warriors, a franquia passou por San Francisco e Oakland, conquistando títulos em todas as eras. Nos anos 60, brilhou com Wilt Chamberlain; nos 70, com Rick Barry; mas foi com Stephen Curry, Klay Thompson, Draymond Green e o técnico Steve Kerr que os Warriors criaram uma dinastia moderna. Entre 2015 e 2022, venceram quatro títulos, mudando o basquete com o estilo baseado em arremessos de três pontos e movimentação constante. São símbolo da revolução tática da NBA moderna.",
     uniforms: {
       home: "https://s2-oglobo.glbimg.com/I0QYJTx9TBklwunO54XzAivJ2g0=/0x0:1080x883/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2025/q/U/8h6ZIXS4iYQSb8SuA30w/curry.jpg",
-      away: "https://i.superesportes.com.br/Pq9G3kfNLPkj9EFKSsNT9_72Plc=/smart/imgsapp.mg.superesportes.com.br/app/noticia_126420360808/2019/10/31/2918600/20191031100243559922e.jpg"
+      away: "https://library.sportingnews.com/styles/crop_style_16_9_desktop_webp/s3/2025-06/USATSI_26058637.jpg.webp?itok=2gIIregV"
     },
     colors: ["#1D428A", "#FFC72C"],
     logo: "https://upload.wikimedia.org/wikipedia/en/0/01/Golden_State_Warriors_logo.svg",
@@ -506,7 +506,7 @@ export const TEAMS: Team[] = [
     history: "Fundado em 2002 como New Orleans Hornets, o time adotou o nome Pelicans em 2013, em homenagem ao pássaro símbolo do estado da Louisiana. Teve momentos marcantes com Chris Paul e, depois, com o jovem fenômeno Anthony Davis, antes de iniciar nova fase com Zion Williamson e Brandon Ingram. Apesar de ser uma das franquias mais jovens da NBA, os Pelicans representam a energia e a resiliência de Nova Orleans, cidade que abraçou o time com orgulho.",
     uniforms: {
       home: "https://www.usatoday.com/gcdn/authoring/authoring-images/2023/12/21/USAT/72002692007-usatsi-22113050-168402560-lowres-1.jpg?crop=999,998,x298,y0",
-      away: "https://legacymedia.sportsplatform.io/image/upload/v1735654799/huntu69y6pdipz5xnnfq.jpg"
+      away: "https://athlonsports.com/.image/w_3840,q_auto:good,c_limit/MjY6MDAwMDAwMDAwODA3NjAz/usatsi_25566660.jpg"
     },
     colors: ["#0C2340", "#85714D", "#C8102E"],
     logo: "https://upload.wikimedia.org/wikipedia/en/0/0d/New_Orleans_Pelicans_logo.svg",
