@@ -505,8 +505,8 @@ export const TEAMS: Team[] = [
     championships: 0,
     history: "Fundado em 2002 como New Orleans Hornets, o time adotou o nome Pelicans em 2013, em homenagem ao pássaro símbolo do estado da Louisiana. Teve momentos marcantes com Chris Paul e, depois, com o jovem fenômeno Anthony Davis, antes de iniciar nova fase com Zion Williamson e Brandon Ingram. Apesar de ser uma das franquias mais jovens da NBA, os Pelicans representam a energia e a resiliência de Nova Orleans, cidade que abraçou o time com orgulho.",
     uniforms: {
-      home: "https://www.usatoday.com/gcdn/authoring/authoring-images/2023/12/21/USAT/72002692007-usatsi-22113050-168402560-lowres-1.jpg?crop=999,998,x298,y0",
-      away: "https://athlonsports.com/.image/w_3840,q_auto:good,c_limit/MjY6MDAwMDAwMDAwODA3NjAz/usatsi_25566660.jpg"
+      home: "https://athlonsports.com/.image/w_3840,q_auto:good,c_limit/MjY6MDAwMDAwMDAwODA3NjAz/usatsi_25566660.jpg",
+      away: "https://legacymedia.sportsplatform.io/image/upload/v1735654799/huntu69y6pdipz5xnnfq.jpg"
     },
     colors: ["#0C2340", "#85714D", "#C8102E"],
     logo: "https://upload.wikimedia.org/wikipedia/en/0/0d/New_Orleans_Pelicans_logo.svg",
