@@ -1109,73 +1109,72 @@ const sorted = useMemo(() => {
 
 
   return (
-    <div
-      className="min-h-screen bg-neutral-950 text-white"
-      onMouseMove={(e) => {
-        const x = (e.clientX / window.innerWidth) * 100;
-        const y = (e.clientY / window.innerHeight) * 100;
-        setHoverStyle({ x, y });
-      }}
+  <div
+    className="min-h-screen bg-neutral-950 text-white"
+    onMouseMove={(e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      setHoverStyle({ x, y });
+    }}
+    style={{
+      backgroundImage:
+        `radial-gradient(800px circle at ${hoverStyle.x}% ${hoverStyle.y}%, rgba(120,120,255,0.09), transparent 30%), radial-gradient(600px circle at 10% 20%, rgba(0,180,216,0.08), transparent 35%), radial-gradient(700px circle at 90% 10%, rgba(233,84,32,0.06), transparent 40%)`,
+    }}
+  >
+
+    {/* HEADER FIXO */}
+    <header
+      className="fixed w-full top-0 left-0 z-[9999] border-b border-white/10 bg-neutral-950/80 supports-[backdrop-filter]:bg-neutral-950/60"
       style={{
-        backgroundImage:
-          `radial-gradient(800px circle at ${hoverStyle.x}% ${hoverStyle.y}%, rgba(120,120,255,0.09), transparent 30%), radial-gradient(600px circle at 10% 20%, rgba(0,180,216,0.08), transparent 35%), radial-gradient(700px circle at 90% 10%, rgba(233,84,32,0.06), transparent 40%)`,
+        WebkitBackdropFilter: "blur(10px)",
+        backdropFilter: "blur(10px)",
+        transform: "translate3d(0,0,0)",
       }}
     >
-      {/* Header */}
-<header
-  className="w-full top-0 left-0 z-[9999] border-b border-white/10 bg-neutral-950/80 supports-[backdrop-filter]:bg-neutral-950/60"
-  style={{
-    position: "fixed",
-    WebkitBackdropFilter: "blur(10px)",
-    backdropFilter: "blur(10px)",
-    transform: "translate3d(0,0,0)",
-  }}
->
-  <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-    <div className="flex items-center gap-3">
-      <div className="flex h-9 w-9 items-center justify-center">
-        <Image
-          src="/courtview-icon.png"
-          alt="CourtView logo"
-          width={36}
-          height={36}
-          className="object-contain"
-        />
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center">
+            <Image
+              src="/courtview-icon.png"
+              alt="CourtView logo"
+              width={36}
+              height={36}
+              className="object-contain"
+            />
+          </div>
+          <div>
+            <h1 className="text-xl font-extrabold tracking-tight">CourtView</h1>
+            <p className="text-xs text-white/60">Times, histórias e recordes da NBA</p>
+          </div>
+        </div>
+
+        <nav className="flex items-center gap-2">
+          <button
+            className={`rounded-xl px-3 py-2 text-sm transition ${
+              activeTab === "teams"
+                ? "bg-white text-neutral-900"
+                : "bg-white/10 text-white/90 hover:bg-white/20"
+            }`}
+            onClick={() => setActiveTab("teams")}
+          >
+            Times
+          </button>
+          <button
+            className={`rounded-xl px-3 py-2 text-sm transition ${
+              activeTab === "records"
+                ? "bg-white text-neutral-900"
+                : "bg-white/10 text-white/90 hover:bg-white/20"
+            }`}
+            onClick={() => setActiveTab("records")}
+          >
+            Recordes
+          </button>
+        </nav>
       </div>
-      <div>
-        <h1 className="text-xl font-extrabold tracking-tight">CourtView</h1>
-        <p className="text-xs text-white/60">
-          Times, histórias e recordes da NBA
-        </p>
-      </div>
-    </div>
+    </header>
 
-    <nav className="flex items-center gap-2">
-      <button
-        className={`rounded-xl px-3 py-2 text-sm transition ${
-          activeTab === "teams"
-            ? "bg-white text-neutral-900"
-            : "bg-white/10 text-white/90 hover:bg-white/20"
-        }`}
-        onClick={() => setActiveTab("teams")}
-      >
-        Times
-      </button>
-      <button
-        className={`rounded-xl px-3 py-2 text-sm transition ${
-          activeTab === "records"
-            ? "bg-white text-neutral-900"
-            : "bg-white/10 text-white/90 hover:bg-white/20"
-        }`}
-        onClick={() => setActiveTab("records")}
-      >
-        Recordes
-      </button>
-    </nav>
-  </div>
-</header>
-
-
+    {/* AQUI COMEÇA O MAIN QUE FALTAVA */}
+    <main className="pt-24 pb-10">
 
       {/* Hero / Controls */}
       <section className="mx-auto max-w-7xl px-4 py-8">
@@ -1283,6 +1282,7 @@ const sorted = useMemo(() => {
       </footer>
 
       <Drawer team={selected} onClose={() => setSelected(null)} />
+        </main>
     </div>
   );
 }
