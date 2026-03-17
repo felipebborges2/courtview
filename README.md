@@ -63,6 +63,6 @@ PRs, issues and feature suggestions are welcome.
 ---
 
 📄 License
-MIT License © 2025 — Felipe Borges
+Felipe Borges © - 2025
 
 ---
